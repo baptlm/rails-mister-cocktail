@@ -1,0 +1,22 @@
+<div class= "container">
+<h2> Details on your cocktail</h2>
+<hr>
+Name | <%= @cocktail.name %>
+<hr>
+<p> Ingredients </p>
+<ul>
+  <% @cocktail.ingredients.each do |ingredient| %>
+    <li> <%= ingredient.name %> </li>
+  <% end  %>
+</ul>
+
+
+
+<hr>
+<%= link_to "Home", cocktails_path, class: "btn btn-warning" %>
+<br>
+<%= link_to "Ajouter Ingredient", new_cocktail_dose_path(@cocktail), class: "btn btn-warning" %>
+
+
+
+
